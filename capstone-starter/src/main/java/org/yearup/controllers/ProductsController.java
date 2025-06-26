@@ -81,7 +81,9 @@ public class ProductsController
     {
         try
         {
-            productDao.create(product);
+            //Not create it should update, so wrong method called here
+            //productDao.create(product);//
+            productDao.update(id,product);
         }
         catch(Exception ex)
         {

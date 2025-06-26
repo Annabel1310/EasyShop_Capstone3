@@ -44,22 +44,31 @@ public class ProductsController
 
     @GetMapping("{id}")
     @PreAuthorize("permitAll()")
-    public Product getById(@PathVariable int id )
+    public Product getById(@PathVariable int id)
     {
         try
         {
             var product = productDao.getById(id);
 
-            if(product == null)
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            if (product == null)
+            {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found.");
+            }
 
             return product;
         }
+        catch(ResponseStatusException ex)
+        {
+            // Let 404 pass through unchanged
+            throw ex;
+        }
         catch(Exception ex)
         {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Oops... our bad.");
+            // Log ex.getMessage() if needed
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred.");
         }
     }
+
 
     @PostMapping()
     @PreAuthorize("hasRole('ROLE_ADMIN')")

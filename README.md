@@ -1,6 +1,12 @@
-# 🛒 EasyShop Shopping Cart API
-EasyShop is a robust, full-featured Java Spring Boot-powered RESTful API that brings the convenience and efficiency of modern online shopping right into your development environment. Tailored for e-commerce platforms, this API empowers users to seamlessly manage their shopping experience—from browsing products to calculating their final checkout total with precision.
-Whether you're building a small boutique storefront or scaling to a high-traffic retail platform, EasyShop provides the foundational components needed to support a secure, user-specific shopping cart system. Backed by a MySQL database and tested thoroughly using Postman, this project serves as both a practical template and a hands-on learning tool for developers exploring Spring Boot, REST architecture, and databa
+
+![logo](https://github.com/user-attachments/assets/bbb46e79-8766-4fef-9809-790c40c60b5d)
+
+
+
+
+# 🛒 EasyShop API
+EasyShop is a Java Spring Boot REST API for managing an e-commerce platform. It supports product browsing, category filtering, and a secure, user-specific shopping cart system.
+Built with MySQL and tested via Postman, EasyShop is ideal for learning Spring Boot, RESTful architecture, and database integration—whether you're creating a small shop or scaling up a retail backend.
 
 ---
 
